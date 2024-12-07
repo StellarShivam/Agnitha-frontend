@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./BookList.css";
+import Button from "../button/button.component";
 
 const Book = ({
   id,
@@ -27,7 +28,7 @@ const Book = ({
         <h3>By: {authors}</h3>
         <p>Published By: {publisher}</p>
         <div className="buttons">
-          <a href={previewLink}>
+          <a href={previewLink} target="_blank" rel="noopener noreferrer">
             <button>See this Book</button>
           </a>
         </div>

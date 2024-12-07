@@ -1,5 +1,5 @@
 .header-content {
-  min-height: 75vh;
+  min-height: 85vh;
   background: linear-gradient(rgba(35, 35, 35, 0.219), rgba(38, 38, 39, 0.5)),
     url("../../images/a-book-5178205.jpg") center/cover no-repeat;
   flex-direction: column;
