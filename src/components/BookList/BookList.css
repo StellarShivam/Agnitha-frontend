@@ -1,0 +1,382 @@
+.booklist,
+.book-details {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+.booklist-content {
+  justify-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+.book-item {
+  padding: 3rem 2rem;
+  border-radius: 4px;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+  transition: var(--transition);
+}
+.book-item:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.book-item-img img {
+  max-width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.book-item-info {
+  margin-top: 2rem;
+}
+.book-item-info-item.title {
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+.book-item-info-item.author {
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.book-item-info-item:not(.book-item-info-item.title) span:last-child {
+  opacity: 0.8;
+}
+.book-item-info-item.publish-year {
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1300px) {
+  .booklist-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+}
+
+@media screen and (min-width: 1352px) {
+  .booklist-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+  .book-item-img img {
+    max-width: 120px;
+    gap: 5rem;
+  }
+}
+/*---------------------------*/
+
+.page.card-2-example-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #0cd2d1, #0857c0);
+  color: #fdfcfd;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.card-2 {
+  display: flex;
+  align-items: center;
+  width: 75vw;
+  max-width: 750px;
+  padding: 21px 20px 23px 5px;
+  background: white;
+  border-radius: 11px;
+  box-shadow: 0 80px 60px rgb(0 0 0 / 12%);
+}
+
+.card-2 img {
+  max-width: 218px;
+  width: 18vw;
+  height: 276px;
+  object-fit: cover;
+  margin-left: -39px;
+  margin-right: 31px;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 12%);
+  transition: border-radius 0.3s;
+}
+
+.card-2 h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-bottom: 6px;
+}
+
+.card-2 h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  opacity: 0.66;
+}
+
+.card-2 p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  opacity: 0.42;
+}
+
+.card-2 .buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.card-2 button {
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+  width: 40%;
+  min-width: 177px;
+  text-align: center;
+  font-family: inherit;
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+.card-2 button.primary {
+  background: #ffffff;
+  color: #121017;
+}
+
+@media (width <= 600px) {
+  .card-2 {
+    margin: 0 40px;
+    padding-left: 55px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    width: 73%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .booklist-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 11rem;
+    margin-top: 10rem;
+  }
+
+  .card-2 .buttons {
+    justify-content: center;
+  }
+
+  .card-2 .buttons button {
+    width: 50%;
+  }
+
+  .card-2 h2 {
+    margin-right: 0;
+    font-size: 26px;
+  }
+
+  .card-2 img {
+    margin: -98px 0 18px 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 250px;
+  }
+
+  .card-2 p {
+    max-width: 400px;
+  }
+}
+
+@media (width <= 420px) {
+  .card-2 img {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50%;
+    margin: -140px 0 30px 0;
+  }
+}
+
+/*--------------------*/
+
+.pagination-wrapper {
+  margin-top: 9rem;
+  font-size: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes pagination-container--animation-prev {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(18px);
+  }
+}
+
+@keyframes pagination-container--animation-next {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.transition-prev .pagination-container {
+  animation: pagination-container--animation-prev 0.3s forwards;
+}
+
+.transition-next .pagination-container {
+  animation: pagination-container--animation-next 0.3s forwards;
+}
+
+.little-dot {
+  width: 6px;
+  height: 6px;
+  background: #dbd3d3;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px;
+  position: relative;
+  z-index: 10;
+}
+
+.little-dot--first,
+.little-dot--last {
+  z-index: 5;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.transition-prev .little-dot--first {
+  animation: slideLeft 0.4s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes little-dot--first--animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.transition-next .little-dot--first {
+  animation: little-dot--last--animation 0.3s forwards;
+}
+
+@keyframes little-dot--last--animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.transition-prev .little-dot--last {
+  animation: little-dot--last--animation 0.3s forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(18px);
+    opacity: 1;
+  }
+}
+
+.transition-next .little-dot--last {
+  animation: slideRight 0.4s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.big-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #eba544;
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+}
+
+.transition-next .big-dot {
+  right: auto;
+  left: -6px;
+}
+
+.big-dot-container {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.transition-next .big-dot-container {
+  right: auto;
+  left: 3px;
+}
+
+@keyframes big-dot-container--animation-prev {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-50%) rotate(-179deg);
+  }
+}
+
+@keyframes big-dot-container--animation-next {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-50%) rotate(-181deg);
+  }
+}
+
+.transition-prev .big-dot-container {
+  animation: big-dot-container--animation-prev 0.3s forwards;
+}
+
+.transition-next .big-dot-container {
+  animation: big-dot-container--animation-next 0.3s forwards;
+}
+
+.dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #dbd3d3;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dots:hover {
+  fill: #d0c5c5;
+}
+
+.btn--next {
+  left: calc(100% + 20px);
+}
+
+.btn--prev {
+  right: calc(100% + 20px);
+}
